@@ -9,15 +9,19 @@
 
 body {
   background: linear-gradient(#370554, 75%, #a118f0);
-  width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 30px 100px;
   align-items: center;
+  z-index: 10000;
 }
 
 header .logo {
@@ -51,4 +55,24 @@ header ul li a:hover,
 header .active-link {
   background: white;
   color: #370554;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+}
+
+section .images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+section img#moon {
+  mix-blend-mode: screen;
 }
