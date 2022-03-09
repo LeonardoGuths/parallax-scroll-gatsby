@@ -7,13 +7,8 @@
 <h1 align="center">
   Testing new features and integrating with GatsbyJS
 </h1>
-<p>
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
 
-# Gatsby Instructions
+# Standard Gatsby Instructions 👇
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
