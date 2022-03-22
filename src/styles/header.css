@@ -1,0 +1,45 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 100px;
+  align-items: center;
+  z-index: 10000;
+}
+
+.page-header .logo {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.page-header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.page-header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: white;
+  border-radius: 2rem;
+  transition: 0.2s;
+}
+
+.page-header ul li a:hover,
+.page-header .active-link {
+  background: white;
+  color: #370554;
+}

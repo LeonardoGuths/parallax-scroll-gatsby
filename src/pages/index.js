@@ -1,12 +1,37 @@
 import React from "react"
 import Layout from "../components/Layout"
-import "../styles/global.css"
+import "../styles/home.css"
+import "../styles/button.css"
 import { StaticImage } from "gatsby-plugin-image"
+import { useEffect } from "react"
+import Loading from "../components/Loading"
 
 const Home = () => {
+  useEffect(() => {
+    window.addEventListener("scroll", function () {
+      let value = window.scrollY
+      document.getElementById("stars").style.left = value * 0.25 + "px"
+      document.getElementById("moon").style.top = value * 0.75 + "px"
+      document.getElementById("mountains_behind").style.top = value * 0.5 + "px"
+      document.getElementById("text_moonlight").style.marginRight =
+        value * 3 + "px"
+      document.getElementById("text_moonlight").style.textShadow =
+        (250 - value) * 0.35 +
+        "px " +
+        (500 - value) * 0.2 +
+        "px " +
+        "16px black"
+      document.getElementById("text_moonlight").style.marginTop =
+        value * 0.3 + "px"
+      document.getElementById("middle_button").style.marginTop =
+        value * 0.75 + "px"
+      document.querySelector("header").style.marginTop = value * 0.75 + "px"
+    })
+  })
+
   return (
     <Layout>
-      <section>
+      <section className="start-section">
         <StaticImage
           src="../assets/images/stars.png"
           alt="stars"
@@ -31,13 +56,16 @@ const Home = () => {
           className="images"
           id="mountains_behind"
         />
-        <h2 className="middle-text" id="text-moonlight">
-          Moon Light
+        <h2 className="middle-text" id="text_moonlight">
+          Moonlight
         </h2>
-        <a href="#textdiv" className="middle-button" id="middle-button">
+        <a href="#textdiv" className="middle-button" id="middle_button">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
           Explore
         </a>
-
         <StaticImage
           src="../assets/images/mountains_front.png"
           alt="front mountains"
@@ -47,8 +75,10 @@ const Home = () => {
           id="mountains_front"
         />
       </section>
+
       <div className="text-div" id="textdiv">
-        <h2>Parallax Scroll Effect</h2>
+        <h1>Parallax Scroll Effect</h1>
+        <Loading />
         <div className="paragraphs">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
@@ -114,30 +144,6 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <script type="text/javascript">
-        (function ()
-        {window.addEventListener("scroll", function () {
-          let value = window.scrollY
-          document.getElementById("stars").style.left = value * 0.25 + "px"
-          document.getElementById("moon").style.top = value * 0.75 + "px"
-          document.getElementById("mountains_behind").style.top =
-            value * 0.5 + "px"
-          document.getElementById("text-moonlight").style.marginRight =
-            value * 3 + "px"
-          document.getElementById("text-moonlight").style.textShadow =
-            (250 - value) * 0.35 +
-            "px " +
-            (500 - value) * 0.2 +
-            "px " +
-            "16px black"
-          document.getElementById("text-moonlight").style.marginTop =
-            value * 0.3 + "px"
-          document.getElementById("middle-button").style.marginTop =
-            value * 0.75 + "px"
-          document.querySelector("header").style.marginTop = value * 0.75 + "px"
-        })}
-        )
-      </script>
     </Layout>
   )
 }

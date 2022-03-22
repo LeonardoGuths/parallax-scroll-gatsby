@@ -1,11 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
+import "../styles/header.css"
 
 const Header = () => {
   return (
-    <header>
+    <header className="page-header">
       <Link to="/" className="logo">
-        Logo
+        Guths
       </Link>
       <ul>
         <li>
