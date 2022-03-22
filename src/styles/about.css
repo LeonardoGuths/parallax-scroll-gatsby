@@ -1,0 +1,12 @@
+.about-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.about-page h1 {
+  color: white;
+  font-size: 72px;
+  font-weight: 700;
+}

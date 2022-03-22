@@ -1,0 +1,127 @@
+.loading {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading .loader {
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  border: 24px solid transparent;
+}
+
+.loading .loader.one {
+  border-top: 24px solid #80cee1;
+  filter: drop-shadow(0 0 50px #80cee1);
+  animation: spin 4s linear infinite reverse;
+  position: relative;
+  margin: -128px;
+}
+.loading .loader.one::before {
+  content: "";
+  position: absolute;
+  transform: translate(42px, 42px);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #80cee1;
+  box-shadow: 0 0 10px #80cee1, 0 0 50px #80cee1, 0 0 75px #80cee1,
+    0 0 125px #80cee1;
+}
+
+.loading .loader.two {
+  border-left: 24px solid #77dd77;
+  filter: drop-shadow(0 0 50px #77dd77);
+  animation: spin 4s linear infinite;
+  animation-delay: -2s;
+  position: relative;
+  margin: -128px;
+}
+
+.loading .loader.two::before {
+  content: "";
+  position: absolute;
+  transform: translate(42px, 42px);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #77dd77;
+  box-shadow: 0 0 10px #77dd77, 0 0 50px #77dd77, 0 0 75px #77dd77,
+    0 0 125px #77dd77;
+}
+
+.loading .loader.three {
+  position: absolute;
+
+  border-bottom: 24px solid #ff6962;
+  filter: drop-shadow(0 0 50px #ff6962);
+  animation: spin 4s linear infinite;
+  animation-delay: -0.5s;
+}
+
+.loading .loader.three::before {
+  content: "";
+  position: absolute;
+  transform: translate(42px, 422px);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ff6962;
+  box-shadow: 0 0 10px #ff6962, 0 0 50px #ff6962, 0 0 75px #ff6962,
+    0 0 125px #ff6962;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading p {
+  position: absolute;
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 8px;
+  padding: 1.5rem 3rem;
+}
+
+.loading p .dot {
+  color: transparent;
+  animation: dots 1.4s ease infinite;
+}
+
+.loading p .dot.first {
+  animation-delay: 0.2s;
+}
+
+.loading p .dot.second {
+  animation-delay: 0.4s;
+}
+
+.loading p .dot.third {
+  animation-delay: 0.6s;
+}
+
+@keyframes dots {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: transparent;
+  }
+}
