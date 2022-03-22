@@ -1,5 +1,4 @@
 import React from "react"
-import "../styles/button.css"
 import styled from "styled-components"
 
 const Button = props => {
@@ -15,7 +14,6 @@ const Button = props => {
 }
 
 const StyledButton = styled.a`
-  transform: translateY(0px);
   text-decoration: none;
   font-size: 2.5em;
   color: white;

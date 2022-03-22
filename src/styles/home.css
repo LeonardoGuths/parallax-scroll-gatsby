@@ -59,3 +59,7 @@
   padding-top: 50px;
   padding-bottom: 32px;
 }
+
+.middle-button {
+  transform: translateY(120px);
+}

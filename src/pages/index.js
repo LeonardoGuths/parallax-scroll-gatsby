@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/Layout"
 import Button from "../components/Button"
 import "../styles/home.css"
-import "../styles/button.css"
 import { StaticImage } from "gatsby-plugin-image"
 import { useEffect } from "react"
 import Loading from "../components/Loading"
@@ -57,7 +56,8 @@ const Home = () => {
           className="images"
           id="mountains_behind"
         />
-        <h2 className="middle-text" id="text-moonlight">
+
+        <h2 className="middle-text" id="text_moonlight">
           Moonlight
         </h2>
 
