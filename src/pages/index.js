@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
+import Button from "../components/Button"
 import "../styles/global.css"
-import "../styles/button.css"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Home = () => {
@@ -32,16 +32,17 @@ const Home = () => {
           className="images"
           id="mountains_behind"
         />
+
         <h2 className="middle-text" id="text-moonlight">
           Moonlight
         </h2>
-        <a href="#textdiv" className="middle-button" id="middle-button">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Explore
-        </a>
+
+        <Button
+          href="#textdiv"
+          className="middle-button"
+          id="middle_button"
+          text="Explore"
+        />
 
         <StaticImage
           src="../assets/images/mountains_front.png"
@@ -137,7 +138,7 @@ const Home = () => {
             "16px black"
           document.getElementById("text-moonlight").style.marginTop =
             value * 0.3 + "px"
-          document.getElementById("middle-button").style.marginTop =
+          document.getElementById("middle_button").style.marginTop =
             value * 0.75 + "px"
           document.querySelector("header").style.marginTop = value * 0.75 + "px"
         })}
