@@ -9,6 +9,7 @@ const About = () => {
       <div className="about-page">
         <h1>About Page</h1>
       </div>
+
       <Loading />
     </Layout>
   )

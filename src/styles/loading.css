@@ -55,7 +55,6 @@
 
 .loading .loader.three {
   position: absolute;
-
   border-bottom: 24px solid #ff6962;
   filter: drop-shadow(0 0 50px #ff6962);
   animation: spin 4s linear infinite;
@@ -90,9 +89,11 @@
   font-weight: 700;
   color: white;
   background: rgba(255, 255, 255, 0.1);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
-  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   padding: 1.5rem 3rem;
 }

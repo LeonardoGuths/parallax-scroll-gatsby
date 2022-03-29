@@ -16,7 +16,7 @@
   justify-content: center;
 }
 .page-footer .footer-text p {
-  filter: drop-shadow(0 0 5px white);
+  filter: drop-shadow(0 0 0px white);
 }
 
 .page-footer::before {
@@ -32,7 +32,7 @@
 .page-footer a {
   text-decoration: none;
   color: #a118f0;
-  filter: drop-shadow(0 0 5px #a118f0);
+  filter: drop-shadow(0 0 10px #a118f0);
   font-size: 1.25rem;
   font-weight: 700;
   width: 100px;

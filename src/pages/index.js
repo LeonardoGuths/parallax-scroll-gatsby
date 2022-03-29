@@ -82,6 +82,7 @@ const Home = () => {
         <h1>Parallax Scroll Effect</h1>
         <Loading />
       </div>
+      <script type="text/javascript" src="vanilla-tilt.js"></script>
     </Layout>
   )
 }
